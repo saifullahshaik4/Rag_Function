@@ -11,7 +11,7 @@ from docx import Document as Docx
 from PIL import Image
 import pytesseract
 
-GEN_MODEL = os.getenv("GEN_MODEL", "gemini-1.5-flash")
+GEN_MODEL = os.getenv("GEN_MODEL", "gemini-2.5-flash")
 EMBED_MODEL = os.getenv("EMBED_MODEL", "text-embedding-004")
 
 def init_gemini():
@@ -143,8 +143,31 @@ Return JSON only:
 def call_llm(context: str, style_example: str = STYLE_EXAMPLE, criteria: str = CRITERIA_TEXT) -> Dict:
     gmodel = genai.GenerativeModel(GEN_MODEL, system_instruction=USER_STORY_SYSTEM)
     prompt = USER_STORY_PROMPT.format(context=context[:8000], style_example=style_example, criteria=criteria)
-    resp = gmodel.generate_content(prompt, generation_config={"temperature": 0.2, "max_output_tokens": 1536})
-    txt = (resp.text or "").strip()
+    
+    generation_config = {
+        "temperature": 0.2, 
+        "max_output_tokens": 2048,
+        "response_mime_type": "application/json"
+    }
+    
+    resp = gmodel.generate_content(prompt, generation_config=generation_config)
+    
+    # Check if response was blocked
+    if not resp.candidates or not resp.candidates[0].content.parts:
+        finish_reason = resp.candidates[0].finish_reason if resp.candidates else None
+        raise RuntimeError(f"Response blocked or empty. Finish reason: {finish_reason}")
+    
+    txt = resp.text.strip()
+    
+    # Clean up potential markdown code blocks
+    if txt.startswith("```json"):
+        txt = txt[7:]
+    if txt.startswith("```"):
+        txt = txt[3:]
+    if txt.endswith("```"):
+        txt = txt[:-3]
+    txt = txt.strip()
+    
     return json.loads(txt)
 
 def process_single_file(file_bytes: bytes, filename: str, max_stories: int = 3) -> Dict:
