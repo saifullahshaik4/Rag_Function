@@ -1,0 +1,74 @@
+2025-11-07 15:35:04,477 - backend.processing - INFO - Gemini API initialized successfully
+2025-11-07 15:35:15,872 - backend.processing - INFO - Gemini API initialized successfully
+2025-11-07 15:35:29,238 - backend.processing - INFO - Gemini API initialized successfully
+2025-11-07 15:35:53,780 - backend.processing - INFO - Gemini API initialized successfully
+2025-11-07 15:36:14,527 - backend.processing - INFO - Gemini API initialized successfully
+2025-11-07 15:36:32,960 - backend.processing - INFO - Gemini API initialized successfully
+2025-11-07 15:36:39,344 - backend.main - INFO - Application startup initiated
+2025-11-07 15:36:39,347 - backend.processing - INFO - Gemini API initialized successfully
+2025-11-07 15:36:39,348 - backend.main - INFO - Application startup completed successfully
+2025-11-07 15:36:48,390 - backend.main - INFO - Application startup initiated
+2025-11-07 15:36:48,392 - backend.processing - INFO - Gemini API initialized successfully
+2025-11-07 15:36:48,392 - backend.main - INFO - Application startup completed successfully
+2025-11-07 15:37:08,590 - backend.main - INFO - Application startup initiated
+2025-11-07 15:37:08,590 - backend.processing - INFO - Gemini API initialized successfully
+2025-11-07 15:37:08,590 - backend.main - INFO - Application startup completed successfully
+2025-11-07 15:38:10,184 - backend.main - INFO - Generate endpoint called - File: Rag_function_test.pdf, Max stories: 3
+2025-11-07 15:38:10,184 - backend.main - INFO - Reading file: Rag_function_test.pdf (35097 bytes)
+2025-11-07 15:38:10,185 - backend.main - INFO - Starting processing of Rag_function_test.pdf
+2025-11-07 15:38:10,185 - backend.processing - INFO - Starting processing for file: Rag_function_test.pdf
+2025-11-07 15:38:10,185 - backend.processing - INFO - Configured to generate 3 user stories
+2025-11-07 15:38:10,185 - backend.processing - INFO - Extracting text from file: Rag_function_test.pdf (35097 bytes)
+2025-11-07 15:38:10,318 - backend.processing - INFO - Extracted 2380 characters from PDF with 2 pages
+2025-11-07 15:38:10,319 - backend.processing - INFO - Text chunked into 1 chunks
+2025-11-07 15:38:10,319 - backend.processing - INFO - Processing story 1/3: key requirements and capabilities
+2025-11-07 15:38:10,319 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-07 15:38:10,789 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-07 15:38:10,789 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-07 15:38:11,055 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-07 15:38:11,055 - backend.processing - INFO - Retrieved 1 relevant chunks for query: key requirements and capabilities
+2025-11-07 15:38:11,056 - backend.processing - INFO - Calling LLM with context length: 2393 characters
+2025-11-07 15:38:11,056 - backend.processing - INFO - LLM attempt 1/3 with temperature 0.2
+2025-11-07 15:38:20,751 - backend.processing - ERROR - JSON parsing error on attempt 1: Expecting ',' delimiter: line 15 column 15 (char 1446)
+2025-11-07 15:38:20,751 - backend.processing - ERROR - Malformed JSON (first 500 chars): {
+  "title": "Retrieve Patient Demographic Data via FHIR API",
+  "story": "As a third-party application developer, I want to securely retrieve a patient's demographic and contact information using a FHIR R4 compliant API, so that my application can provide patients with access to their health data and facilitate data exchange with other payers.",
+  "acceptance_criteria": [
+    "Given a valid patient identifier and appropriate authorization, When I make a request to the patient demographic API, T
+2025-11-07 15:38:20,752 - backend.processing - INFO - Retrying with increased temperature: 0.4
+2025-11-07 15:38:20,752 - backend.processing - INFO - LLM attempt 2/3 with temperature 0.4
+2025-11-07 15:38:29,846 - backend.processing - ERROR - JSON parsing error on attempt 2: Expecting property name enclosed in double quotes: line 19 column 5 (char 937)
+2025-11-07 15:38:29,848 - backend.processing - ERROR - Malformed JSON (first 500 chars): {
+  "title": "Patient Access to Demographic Data API",
+  "story": "As a patient, I want to securely access my demographic and contact information via an API, so that I can understand and share my health data with authorized applications.",
+  "acceptance_criteria": [
+    "Given I am an authenticated patient",
+    "When I request my demographic data via the API",
+    "Then the API should return my name, date of birth, gender, addresses, and contact information.",
+    "Given my demographic and cont
+2025-11-07 15:38:29,849 - backend.processing - INFO - Retrying with increased temperature: 0.6000000000000001
+2025-11-07 15:38:29,849 - backend.processing - INFO - LLM attempt 3/3 with temperature 0.6000000000000001
+2025-11-07 15:38:38,295 - backend.processing - INFO - Successfully parsed LLM response as JSON
+2025-11-07 15:38:38,295 - backend.processing - INFO - Successfully generated story: Patient Demographics FHIR API Access
+2025-11-07 15:38:38,297 - backend.processing - INFO - Processing story 2/3: user goals and outcomes
+2025-11-07 15:38:38,297 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-07 15:38:38,574 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-07 15:38:38,575 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-07 15:38:38,830 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-07 15:38:38,830 - backend.processing - INFO - Retrieved 1 relevant chunks for query: user goals and outcomes
+2025-11-07 15:38:38,831 - backend.processing - INFO - Calling LLM with context length: 2393 characters
+2025-11-07 15:38:38,832 - backend.processing - INFO - LLM attempt 1/3 with temperature 0.2
+2025-11-07 15:38:45,935 - backend.processing - INFO - Successfully parsed LLM response as JSON
+2025-11-07 15:38:45,935 - backend.processing - INFO - Successfully generated story: Patient Demographic Data Access
+2025-11-07 15:38:45,935 - backend.processing - INFO - Processing story 3/3: compliance, security, or performance constraints
+2025-11-07 15:38:45,937 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-07 15:38:46,193 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-07 15:38:46,193 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-07 15:38:46,437 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-07 15:38:46,437 - backend.processing - INFO - Retrieved 1 relevant chunks for query: compliance, security, or performance constraints
+2025-11-07 15:38:46,437 - backend.processing - INFO - Calling LLM with context length: 2393 characters
+2025-11-07 15:38:46,438 - backend.processing - INFO - LLM attempt 1/3 with temperature 0.2
+2025-11-07 15:38:55,325 - backend.processing - INFO - Successfully parsed LLM response as JSON
+2025-11-07 15:38:55,325 - backend.processing - INFO - Successfully generated story: Access Patient Demographic and Contact Data via FHIR API
+2025-11-07 15:38:55,325 - backend.processing - INFO - Completed processing Rag_function_test.pdf. Generated 3 stories.
+2025-11-07 15:38:55,325 - backend.main - INFO - Processing completed - Generated 3 stories (0 errors) for Rag_function_test.pdf
