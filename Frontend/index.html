@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>User Story Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Arial;
+        margin: 2rem;
+      }
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+      button {
+        padding: 0.6rem 1rem;
+        border-radius: 8px;
+        border: 1px solid #888;
+        cursor: pointer;
+      }
+      pre {
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+      .row {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+      .muted {
+        color: #666;
+        font-size: 0.9rem;
+      }
+      .ac {
+        margin: 0.25rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upload a document → Get user stories</h1>
+
+    <div class="card">
+      <div class="row">
+        <input id="file" type="file" />
+        <label
+          >Max stories:
+          <input
+            id="maxStories"
+            type="number"
+            value="3"
+            min="1"
+            max="10"
+            style="width: 4rem"
+        /></label>
+        <button id="go">Generate</button>
+      </div>
+      <p class="muted">Supported: pdf, docx, txt, png/jpg (OCR).</p>
+    </div>
+
+    <div id="output"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

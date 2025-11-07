@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Env / keys
+.env
+.env.*.local
+
+# Outputs
+/out/*
+!/out/.gitkeep
+
+# Caches
+/.cache/
+*.npy
+*.npz
