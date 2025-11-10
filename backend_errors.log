@@ -72,3 +72,225 @@
 2025-11-07 15:38:55,325 - backend.processing - INFO - Successfully generated story: Access Patient Demographic and Contact Data via FHIR API
 2025-11-07 15:38:55,325 - backend.processing - INFO - Completed processing Rag_function_test.pdf. Generated 3 stories.
 2025-11-07 15:38:55,325 - backend.main - INFO - Processing completed - Generated 3 stories (0 errors) for Rag_function_test.pdf
+2025-11-07 15:40:43,050 - backend.main - INFO - Application startup initiated
+2025-11-07 15:40:43,050 - backend.processing - INFO - Gemini API initialized successfully
+2025-11-07 15:40:43,050 - backend.main - INFO - Application startup completed successfully
+2025-11-10 07:54:16,434 - backend.main - INFO - Generate endpoint called - File: Rag_function_test.pdf, Max stories: 3
+2025-11-10 07:54:16,438 - backend.main - INFO - Reading file: Rag_function_test.pdf (35097 bytes)
+2025-11-10 07:54:16,439 - backend.main - INFO - Starting processing of Rag_function_test.pdf
+2025-11-10 07:54:16,440 - backend.processing - INFO - Starting processing for file: Rag_function_test.pdf
+2025-11-10 07:54:16,440 - backend.processing - INFO - Configured to generate 3 user stories
+2025-11-10 07:54:16,440 - backend.processing - INFO - Extracting text from file: Rag_function_test.pdf (35097 bytes)
+2025-11-10 07:54:16,704 - backend.processing - INFO - Extracted 2380 characters from PDF with 2 pages
+2025-11-10 07:54:16,709 - backend.processing - INFO - Text chunked into 1 chunks
+2025-11-10 07:54:16,710 - backend.processing - INFO - Processing story 1/3: key requirements and capabilities
+2025-11-10 07:54:16,710 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-10 07:54:17,390 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-10 07:54:17,391 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-10 07:54:17,760 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-10 07:54:17,765 - backend.processing - INFO - Retrieved 1 relevant chunks for query: key requirements and capabilities
+2025-11-10 07:54:17,766 - backend.processing - INFO - Calling LLM with context length: 2393 characters
+2025-11-10 07:54:17,766 - backend.processing - INFO - LLM attempt 1/3 with temperature 0.2
+2025-11-10 07:54:27,766 - backend.processing - INFO - Successfully parsed LLM response as JSON
+2025-11-10 07:54:27,767 - backend.processing - INFO - Successfully generated story: Retrieve Patient Demographic and Contact Data via FHIR API
+2025-11-10 07:54:27,767 - backend.processing - INFO - Processing story 2/3: user goals and outcomes
+2025-11-10 07:54:27,768 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-10 07:54:28,020 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-10 07:54:28,020 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-10 07:54:28,269 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-10 07:54:28,270 - backend.processing - INFO - Retrieved 1 relevant chunks for query: user goals and outcomes
+2025-11-10 07:54:28,270 - backend.processing - INFO - Calling LLM with context length: 2393 characters
+2025-11-10 07:54:28,270 - backend.processing - INFO - LLM attempt 1/3 with temperature 0.2
+2025-11-10 07:54:37,642 - backend.processing - INFO - Successfully parsed LLM response as JSON
+2025-11-10 07:54:37,642 - backend.processing - INFO - Successfully generated story: Patient Access to Demographic and Contact Information API
+2025-11-10 07:54:37,643 - backend.processing - INFO - Processing story 3/3: compliance, security, or performance constraints
+2025-11-10 07:54:37,644 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-10 07:54:37,907 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-10 07:54:37,908 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-10 07:54:38,155 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-10 07:54:38,156 - backend.processing - INFO - Retrieved 1 relevant chunks for query: compliance, security, or performance constraints
+2025-11-10 07:54:38,156 - backend.processing - INFO - Calling LLM with context length: 2393 characters
+2025-11-10 07:54:38,157 - backend.processing - INFO - LLM attempt 1/3 with temperature 0.2
+2025-11-10 07:54:55,690 - backend.processing - INFO - Successfully parsed LLM response as JSON
+2025-11-10 07:54:55,691 - backend.processing - INFO - Successfully generated story: Retrieve Patient Demographic and Contact Information via FHIR API
+2025-11-10 07:54:55,692 - backend.processing - INFO - Completed processing Rag_function_test.pdf. Generated 3 stories.
+2025-11-10 07:54:55,693 - backend.main - INFO - Processing completed - Generated 3 stories (0 errors) for Rag_function_test.pdf
+2025-11-10 08:08:21,490 - backend.main - INFO - Application startup initiated
+2025-11-10 08:08:21,490 - backend.processing - INFO - Gemini API initialized successfully
+2025-11-10 08:08:21,490 - backend.main - INFO - Application startup completed successfully
+2025-11-10 08:08:34,223 - backend.main - INFO - Generate endpoint called - File: Rag_function_test.pdf, Max stories: 3
+2025-11-10 08:08:34,223 - backend.main - INFO - Reading file: Rag_function_test.pdf (35097 bytes)
+2025-11-10 08:08:34,223 - backend.main - INFO - Starting processing of Rag_function_test.pdf
+2025-11-10 08:08:34,224 - backend.processing - INFO - Starting processing for file: Rag_function_test.pdf
+2025-11-10 08:08:34,224 - backend.processing - INFO - Configured to generate 3 user stories
+2025-11-10 08:08:34,224 - backend.processing - INFO - Extracting text from file: Rag_function_test.pdf (35097 bytes)
+2025-11-10 08:08:34,392 - backend.processing - INFO - Extracted 2380 characters from PDF with 2 pages
+2025-11-10 08:08:34,393 - backend.processing - INFO - Text chunked into 1 chunks
+2025-11-10 08:08:34,394 - backend.processing - INFO - Processing story 1/3: key requirements and capabilities
+2025-11-10 08:08:34,394 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-10 08:08:34,918 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-10 08:08:34,919 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-10 08:08:35,182 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-10 08:08:35,186 - backend.processing - INFO - Retrieved 1 relevant chunks for query: key requirements and capabilities
+2025-11-10 08:08:35,187 - backend.processing - INFO - Calling LLM with context length: 2393 characters
+2025-11-10 08:08:35,187 - backend.processing - INFO - LLM attempt 1/3 with temperature 0.2
+2025-11-10 08:08:48,552 - backend.processing - INFO - Successfully parsed LLM response as JSON
+2025-11-10 08:08:48,553 - backend.processing - INFO - Successfully generated story: Retrieve Patient Demographic Data via FHIR API
+2025-11-10 08:08:48,554 - backend.processing - INFO - Processing story 2/3: user goals and outcomes
+2025-11-10 08:08:48,554 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-10 08:08:48,819 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-10 08:08:48,820 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-10 08:08:49,120 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-10 08:08:49,121 - backend.processing - INFO - Retrieved 1 relevant chunks for query: user goals and outcomes
+2025-11-10 08:08:49,121 - backend.processing - INFO - Calling LLM with context length: 2393 characters
+2025-11-10 08:08:49,122 - backend.processing - INFO - LLM attempt 1/3 with temperature 0.2
+2025-11-10 08:08:57,937 - backend.processing - INFO - Successfully parsed LLM response as JSON
+2025-11-10 08:08:57,937 - backend.processing - INFO - Successfully generated story: Retrieve Patient Demographic Data via FHIR API
+2025-11-10 08:08:57,937 - backend.processing - INFO - Processing story 3/3: compliance, security, or performance constraints
+2025-11-10 08:08:57,937 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-10 08:08:58,193 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-10 08:08:58,194 - backend.processing - INFO - Embedding 1 text chunks
+2025-11-10 08:08:58,445 - backend.processing - INFO - Successfully embedded 1 texts with shape (1, 768)
+2025-11-10 08:08:58,446 - backend.processing - INFO - Retrieved 1 relevant chunks for query: compliance, security, or performance constraints
+2025-11-10 08:08:58,446 - backend.processing - INFO - Calling LLM with context length: 2393 characters
+2025-11-10 08:08:58,447 - backend.processing - INFO - LLM attempt 1/3 with temperature 0.2
+2025-11-10 08:09:05,797 - backend.processing - ERROR - Unexpected error during LLM call: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10
+Please retry in 53.508265407s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 10
+}
+, retry_delay {
+  seconds: 53
+}
+]
+Traceback (most recent call last):
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\backend\processing.py", line 201, in call_llm
+    resp = gmodel.generate_content(prompt, generation_config=generation_config)
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\api_core\grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10
+Please retry in 53.508265407s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 10
+}
+, retry_delay {
+  seconds: 53
+}
+]
+2025-11-10 08:09:05,813 - backend.processing - ERROR - Error generating story for query 'compliance, security, or performance constraints': 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10
+Please retry in 53.508265407s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 10
+}
+, retry_delay {
+  seconds: 53
+}
+]
+Traceback (most recent call last):
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\backend\processing.py", line 293, in process_single_file
+    story = call_llm(stitched)
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\backend\processing.py", line 201, in call_llm
+    resp = gmodel.generate_content(prompt, generation_config=generation_config)
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "C:\Users\wolfy\OneDrive\Desktop\Rag-functions\Rag_Function\venv\lib\site-packages\google\api_core\grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10
+Please retry in 53.508265407s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 10
+}
+, retry_delay {
+  seconds: 53
+}
+]
+2025-11-10 08:09:05,820 - backend.processing - INFO - Completed processing Rag_function_test.pdf. Generated 3 stories.
+2025-11-10 08:09:05,820 - backend.main - INFO - Processing completed - Generated 3 stories (1 errors) for Rag_function_test.pdf
+2025-11-10 08:09:13,998 - backend.main - INFO - Export XLSX endpoint called with 3 stories
+2025-11-10 08:09:14,093 - backend.main - INFO - Successfully generated XLSX with 2 stories

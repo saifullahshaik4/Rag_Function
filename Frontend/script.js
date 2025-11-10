@@ -1,6 +1,10 @@
 const API = "http://127.0.0.1:8000/api/generate";
+const EXPORT_API = "http://127.0.0.1:8000/api/export/xlsx";
 const out = document.getElementById("output");
 const btn = document.getElementById("go");
+
+// Store the latest stories for export
+let currentStories = [];
 
 btn.addEventListener("click", async () => {
   out.innerHTML = "";
@@ -33,6 +37,10 @@ btn.addEventListener("click", async () => {
 
 function render(data) {
   const { stories = [], meta = {} } = data || {};
+  
+  // Store stories for export
+  currentStories = stories;
+  
   const parts = [];
   parts.push(
     `<div class="card"><b>Result</b><div class="muted">chunks: ${
@@ -68,51 +76,64 @@ function render(data) {
     `);
   });
 
-  // simple CSV download built client-side
+  // XLSX download button
   if (stories.length) {
-    const csv = toCSV(stories);
     parts.push(
-      `<div class="card"><button onclick="downloadCSV(\`${csv}\`)">Download CSV</button></div>`
+      `<div class="card"><button id="downloadBtn" onclick="downloadXLSX()">Download XLSX</button></div>`
     );
   }
 
   out.innerHTML = parts.join("\n");
 }
 
-function toCSV(stories) {
-  const rows = [["Summary", "Issue Type", "Description", "Priority", "Labels"]];
-  for (const s of stories) {
-    if (s.error) continue;
-    const ac = (s.acceptance_criteria || []).map((x) => `- ${x}`).join("\n");
-    const desc = `${
-      s.story || ""
-    }\n\nAcceptance Criteria:\n${ac}\n\nNon-Functional: ${(
-      s.non_functional || []
-    ).join(", ")}`;
-    rows.push([
-      s.title || "",
-      "Story",
-      desc,
-      s.priority || "",
-      (s.tags || []).join(","),
-    ]);
+async function downloadXLSX() {
+  const btn = document.getElementById("downloadBtn");
+  if (!currentStories || currentStories.length === 0) {
+    alert("No stories to export");
+    return;
   }
-  // escape quotes for CSV
-  return rows
-    .map((r) => r.map((x) => `"${String(x).replaceAll(`"`, `""`)}"`).join(","))
-    .join("\n");
-}
-
-function downloadCSV(content) {
-  const blob = new Blob([content], { type: "text/csv;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "user_stories.csv";
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
+  
+  try {
+    // Disable button and show loading state
+    btn.disabled = true;
+    btn.textContent = "Generating XLSX...";
+    
+    // Call backend API to generate XLSX
+    const response = await fetch(EXPORT_API, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(currentStories),
+    });
+    
+    if (!response.ok) {
+      const err = await response.json().catch(() => ({}));
+      throw new Error(err.detail || response.statusText);
+    }
+    
+    // Get the blob from response
+    const blob = await response.blob();
+    
+    // Create download link
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "user_stories.xlsx";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+    
+    // Reset button
+    btn.disabled = false;
+    btn.textContent = "Download XLSX";
+  } catch (error) {
+    alert(`Error downloading XLSX: ${error.message}`);
+    // Reset button
+    btn.disabled = false;
+    btn.textContent = "Download XLSX";
+  }
 }
 
 function escapeHtml(s) {
